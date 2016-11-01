@@ -1,0 +1,27 @@
+{
+  "name": "keychain",
+  "version": "1.0.0",
+  "description": "A module used to hash passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Euthor/keychain.git"
+  },
+  "keywords": [
+    "key"
+  ],
+  "author": "Alexandros Lemesios alexlemesios@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Euthor/keychain/issues"
+  },
+  "homepage": "https://github.com/Euthor/keychain#readme",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "prompt": "^1.0.0"
+  }
+}
