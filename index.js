@@ -10,8 +10,8 @@
 */
 "use strict";
 
-const prompt = require('prompt');
-const bcrypt = require('bcryptjs');
+const prompt = require("prompt");
+const bcrypt = require("bcryptjs");
 
 prompt.start();
 
@@ -39,5 +39,5 @@ prompt.get(schema, function (err, result) {
    }
    let salt = bcrypt.genSaltSync(10);
    let hash = bcrypt.hashSync(result.password, salt);
-   console.log(bcrypt.compareSync("test", hash));
+   console.log(hash);
 });
