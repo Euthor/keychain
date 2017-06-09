@@ -1,13 +1,8 @@
 /*
 - A module used to hash passwords
--
--
--
--
 - Author : Alexandros Lemesios (alexlemesios@gmail.com)
--
--
 */
+
 "use strict";
 
 const prompt = require("prompt");
@@ -29,15 +24,16 @@ const schema = {
 }
 
 prompt.get(schema, function (err, result) {
-
    if (result.password === result.passwordVerification) {
      console.log("Passwords have matched !");
    }
    else {
      console.log("Passwords didn't match , please try again");
-     return;
+     return false;
    }
-   let salt = bcrypt.genSaltSync(10);
-   let hash = bcrypt.hashSync(result.password, salt);
+
+   const salt = bcrypt.genSaltSync(10);
+   const hash = bcrypt.hashSync(result.password, salt);
+
    console.log(hash);
 });
